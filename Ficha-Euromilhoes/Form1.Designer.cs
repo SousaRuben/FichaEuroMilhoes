@@ -36,9 +36,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtNChaves = new System.Windows.Forms.TextBox();
             this.btnGerar = new System.Windows.Forms.Button();
+            this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtData = new System.Windows.Forms.DateTimePicker();
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
+            this.flowLayoutPanel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
@@ -69,6 +73,7 @@
             // flowLayoutPanel2
             // 
             this.flowLayoutPanel2.Controls.Add(this.flowLayoutPanel3);
+            this.flowLayoutPanel2.Controls.Add(this.flowLayoutPanel4);
             this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 82);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
@@ -115,6 +120,36 @@
             this.btnGerar.Text = "Gerar Chaves";
             this.btnGerar.UseVisualStyleBackColor = true;
             // 
+            // flowLayoutPanel4
+            // 
+            this.flowLayoutPanel4.Controls.Add(this.label3);
+            this.flowLayoutPanel4.Controls.Add(this.txtData);
+            this.flowLayoutPanel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.flowLayoutPanel4.Location = new System.Drawing.Point(278, 3);
+            this.flowLayoutPanel4.Name = "flowLayoutPanel4";
+            this.flowLayoutPanel4.Size = new System.Drawing.Size(426, 156);
+            this.flowLayoutPanel4.TabIndex = 1;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(3, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(389, 36);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Selecione a data a consultar";
+            // 
+            // txtData
+            // 
+            this.txtData.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtData.Location = new System.Drawing.Point(3, 39);
+            this.txtData.MaximumSize = new System.Drawing.Size(420, 35);
+            this.txtData.MinimumSize = new System.Drawing.Size(100, 35);
+            this.txtData.Name = "txtData";
+            this.txtData.Size = new System.Drawing.Size(420, 35);
+            this.txtData.TabIndex = 1;
+            this.txtData.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -134,6 +169,8 @@
             this.flowLayoutPanel2.PerformLayout();
             this.flowLayoutPanel3.ResumeLayout(false);
             this.flowLayoutPanel3.PerformLayout();
+            this.flowLayoutPanel4.ResumeLayout(false);
+            this.flowLayoutPanel4.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -148,6 +185,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtNChaves;
         private System.Windows.Forms.Button btnGerar;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DateTimePicker txtData;
     }
 }
 
