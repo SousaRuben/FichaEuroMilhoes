@@ -38,11 +38,11 @@
             this.btnGerar = new System.Windows.Forms.Button();
             this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtData = new System.Windows.Forms.DateTimePicker();
             this.flowLayoutPanel5 = new System.Windows.Forms.FlowLayoutPanel();
             this.dgvChaves = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cmbChaves = new System.Windows.Forms.ComboBox();
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
@@ -132,7 +132,7 @@
             // 
             this.flowLayoutPanel4.AutoSize = true;
             this.flowLayoutPanel4.Controls.Add(this.label3);
-            this.flowLayoutPanel4.Controls.Add(this.txtData);
+            this.flowLayoutPanel4.Controls.Add(this.cmbChaves);
             this.flowLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Right;
             this.flowLayoutPanel4.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -149,16 +149,6 @@
             this.label3.Size = new System.Drawing.Size(389, 36);
             this.label3.TabIndex = 0;
             this.label3.Text = "Selecione a data a consultar";
-            // 
-            // txtData
-            // 
-            this.txtData.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtData.Location = new System.Drawing.Point(3, 39);
-            this.txtData.MaximumSize = new System.Drawing.Size(420, 35);
-            this.txtData.MinimumSize = new System.Drawing.Size(100, 35);
-            this.txtData.Name = "txtData";
-            this.txtData.Size = new System.Drawing.Size(389, 35);
-            this.txtData.TabIndex = 1;
             // 
             // flowLayoutPanel5
             // 
@@ -202,6 +192,15 @@
             this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
             // 
+            // cmbChaves
+            // 
+            this.cmbChaves.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cmbChaves.FormattingEnabled = true;
+            this.cmbChaves.Location = new System.Drawing.Point(3, 39);
+            this.cmbChaves.Name = "cmbChaves";
+            this.cmbChaves.Size = new System.Drawing.Size(389, 44);
+            this.cmbChaves.TabIndex = 1;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -241,11 +240,11 @@
         private System.Windows.Forms.Button btnGerar;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DateTimePicker txtData;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel5;
         private System.Windows.Forms.DataGridView dgvChaves;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.ComboBox cmbChaves;
     }
 }
 
