@@ -19,9 +19,8 @@ namespace Ficha_Euromilhoes
         {
             InitializeComponent();
             Chave myChave = new Chave();
-            DateTime date = myChave.CreatedAt.Date;
-            string data = $"{date.Day}/{date.Month}/{date.Year}";
-            Debug.WriteLine(data);
+            Debug.WriteLine(myChave.Data);
+
             foreach (var num in myChave.Principais)
             {
                 Debug.WriteLine(num);
