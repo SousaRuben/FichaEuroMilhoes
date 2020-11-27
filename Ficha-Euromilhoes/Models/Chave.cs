@@ -13,10 +13,28 @@ namespace Ficha_Euromilhoes.Models
         public const int MIN = 1;
         public int[] Principais = new int[5];
         public int[] Estrelas = new int[2];
+        public int numero = 0;
+
         public Chave() : base()
         {
             gerarPrincipais();
             gerarEstrelas();
+        }
+
+        public int gerarPrincipal()
+        {
+            Random random = new Random();
+
+            numero = random.Next(MIN, MAX_PRINCIPAL);
+
+            for (int i = 0; i < Principais.Length; i++)
+            {
+                if (numero == Principais[i])
+                {
+                    gerarPrincipal();
+                }
+            }
+            return numero;
         }
 
         public void gerarPrincipais()
@@ -25,7 +43,7 @@ namespace Ficha_Euromilhoes.Models
 
             for (int i = 0; i < Principais.Length; i++)
             {
-                Principais[i] = random.Next(MIN, MAX_PRINCIPAL);
+                Principais[i] = gerarPrincipal();
             }
         }
          public void gerarEstrelas()
