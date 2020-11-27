@@ -9,27 +9,18 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Diagnostics;
 using Ficha_Euromilhoes.Models;
-
+using Ficha_Euromilhoes.Repositories;
 
 namespace Ficha_Euromilhoes
 {
     public partial class Form1 : Form
     {
+        public const string path = "../../data/file.json";
         public Form1()
         {
             InitializeComponent();
-            Chave myChave = new Chave();
-            Debug.WriteLine(myChave.Data);
-
-            foreach (var num in myChave.Principais)
-            {
-                Debug.WriteLine(num);
-            }
-            Debug.WriteLine("-------------------------");
-            foreach (var num in myChave.Estrelas)
-            {
-                Debug.WriteLine(num);
-            }
+            ChaveRepository repository = new ChaveRepository(path);
+            repository.save();
 
         }
 
