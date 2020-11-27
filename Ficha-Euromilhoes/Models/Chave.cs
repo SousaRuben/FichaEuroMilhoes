@@ -8,8 +8,8 @@ namespace Ficha_Euromilhoes.Models
 {
     class Chave : Model
     {
-        public const int MAX_PRINCIPAL = 50;
-        public const int MAX_ESTRELAS = 12;
+        public const int MAX_PRINCIPAL = 51;
+        public const int MAX_ESTRELAS = 13;
         public const int MIN = 1;
         public int[] Principais = new int[5];
         public int[] Estrelas = new int[2];
@@ -17,6 +17,15 @@ namespace Ficha_Euromilhoes.Models
         {
             gerarPrincipais();
             gerarEstrelas();
+        }
+
+        public int gerarEstrela()
+        {
+            Random random = new Random();
+            int novaEstrela = random.Next(MIN, MAX_ESTRELAS);
+            novaEstrela = Estrelas.Contains(novaEstrela) ? gerarEstrela() : novaEstrela;
+
+            return novaEstrela;
         }
 
         public void gerarPrincipais()
@@ -30,13 +39,10 @@ namespace Ficha_Euromilhoes.Models
         }
          public void gerarEstrelas()
         {
-            Random random = new Random();
-
             for (int i = 0; i < Estrelas.Length; i++)
             {
-                Estrelas[i] = random.Next(MIN, MAX_ESTRELAS);
+                Estrelas[i] = gerarEstrela();
             }
-
         }
             
     }
