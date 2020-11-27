@@ -24,5 +24,12 @@ namespace Ficha_Euromilhoes
 
         }
 
+        private void btnGerar_Click(object sender, EventArgs e)
+        {
+            Chave myChave = new Chave();
+
+            dgvChaves.Rows.Add(myChave.getPrincipais(), myChave.getEstrelas());
+            
+        }
     }
 }

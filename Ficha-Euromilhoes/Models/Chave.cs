@@ -44,6 +44,7 @@ namespace Ficha_Euromilhoes.Models
                 Principais[i] = gerarPrincipal();
             }
         }
+
          public void gerarEstrelas()
         {
             for (int i = 0; i < Estrelas.Length; i++)
@@ -51,6 +52,29 @@ namespace Ficha_Euromilhoes.Models
                 Estrelas[i] = gerarEstrela();
             }
         }
-            
+           
+        public string getPrincipais()
+        {
+            string data = "";
+
+            foreach (int valor in Principais)
+            {
+                data += $"{valor} ";
+            }
+
+            return data;
+        }
+        public string getEstrelas()
+        {
+            string data = "";
+
+            foreach (int valor in Estrelas)
+            {
+                data += $"{valor} ";
+            }
+
+            return data;
+        }
+
     }
 }
