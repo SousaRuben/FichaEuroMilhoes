@@ -24,10 +24,16 @@ namespace Ficha_Euromilhoes
 
         private void btnGerar_Click(object sender, EventArgs e)
         {
-            Chave myChave = repository.addChave();
+            int nChave = 0;
+            int.TryParse(this.txtNChaves.Text, out nChave);
+
+            for(int i = 0; i < nChave; i++)
+            {
+                Chave myChave = repository.addChave();
+                dgvChaves.Rows.Add(myChave.Principais, myChave.Estrelas);
+            }
 
             repository.save();
-            dgvChaves.Rows.Add(myChave.Principais, myChave.Estrelas);
         }
     }
 }
