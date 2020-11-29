@@ -43,6 +43,7 @@
             this.dgvChaves = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnShowAll = new System.Windows.Forms.Button();
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             this.flowLayoutPanel5.SuspendLayout();
@@ -86,7 +87,7 @@
             this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 82);
             this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(781, 654);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(781, 781);
             this.flowLayoutPanel2.TabIndex = 1;
             // 
             // flowLayoutPanel5
@@ -94,10 +95,11 @@
             this.flowLayoutPanel5.AutoSize = true;
             this.flowLayoutPanel5.Controls.Add(this.flowLayoutPanel3);
             this.flowLayoutPanel5.Controls.Add(this.flowLayoutPanel4);
+            this.flowLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel5.Location = new System.Drawing.Point(3, 2);
             this.flowLayoutPanel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.flowLayoutPanel5.Name = "flowLayoutPanel5";
-            this.flowLayoutPanel5.Size = new System.Drawing.Size(676, 155);
+            this.flowLayoutPanel5.Size = new System.Drawing.Size(676, 156);
             this.flowLayoutPanel5.TabIndex = 2;
             // 
             // flowLayoutPanel3
@@ -112,7 +114,7 @@
             this.flowLayoutPanel3.Location = new System.Drawing.Point(3, 2);
             this.flowLayoutPanel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(269, 151);
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(269, 152);
             this.flowLayoutPanel3.TabIndex = 0;
             // 
             // label2
@@ -150,13 +152,14 @@
             this.flowLayoutPanel4.AutoSize = true;
             this.flowLayoutPanel4.Controls.Add(this.label3);
             this.flowLayoutPanel4.Controls.Add(this.cmbChaves);
+            this.flowLayoutPanel4.Controls.Add(this.btnShowAll);
             this.flowLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Right;
             this.flowLayoutPanel4.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.flowLayoutPanel4.Location = new System.Drawing.Point(278, 2);
             this.flowLayoutPanel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.flowLayoutPanel4.Name = "flowLayoutPanel4";
-            this.flowLayoutPanel4.Size = new System.Drawing.Size(395, 151);
+            this.flowLayoutPanel4.Size = new System.Drawing.Size(395, 152);
             this.flowLayoutPanel4.TabIndex = 1;
             // 
             // label3
@@ -191,14 +194,14 @@
             this.Column1,
             this.Column2});
             this.dgvChaves.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvChaves.Location = new System.Drawing.Point(3, 161);
+            this.dgvChaves.Location = new System.Drawing.Point(3, 162);
             this.dgvChaves.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dgvChaves.MaximumSize = new System.Drawing.Size(795, 300);
+            this.dgvChaves.MaximumSize = new System.Drawing.Size(795, 250);
             this.dgvChaves.Name = "dgvChaves";
             this.dgvChaves.RowHeadersVisible = false;
             this.dgvChaves.RowHeadersWidth = 51;
             this.dgvChaves.RowTemplate.Height = 24;
-            this.dgvChaves.Size = new System.Drawing.Size(676, 300);
+            this.dgvChaves.Size = new System.Drawing.Size(676, 250);
             this.dgvChaves.TabIndex = 3;
             // 
             // Column1
@@ -213,17 +216,29 @@
             this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
             // 
+            // btnShowAll
+            // 
+            this.btnShowAll.AutoSize = true;
+            this.btnShowAll.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnShowAll.Location = new System.Drawing.Point(3, 87);
+            this.btnShowAll.Name = "btnShowAll";
+            this.btnShowAll.Size = new System.Drawing.Size(389, 62);
+            this.btnShowAll.TabIndex = 2;
+            this.btnShowAll.Text = "Atualizar";
+            this.btnShowAll.UseVisualStyleBackColor = true;
+            this.btnShowAll.Click += new System.EventHandler(this.btnShowAll_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(781, 736);
+            this.ClientSize = new System.Drawing.Size(781, 863);
             this.Controls.Add(this.flowLayoutPanel2);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.MaximumSize = new System.Drawing.Size(919, 798);
-            this.MinimumSize = new System.Drawing.Size(549, 773);
+            this.MaximumSize = new System.Drawing.Size(919, 1000);
+            this.MinimumSize = new System.Drawing.Size(600, 900);
             this.Name = "Form1";
             this.Text = "Euromilhões";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -259,6 +274,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.ComboBox cmbChaves;
+        private System.Windows.Forms.Button btnShowAll;
     }
 }
 

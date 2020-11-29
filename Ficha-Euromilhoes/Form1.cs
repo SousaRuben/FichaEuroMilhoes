@@ -70,6 +70,16 @@ namespace Ficha_Euromilhoes
             string data = cmbChaves.Text;
             List<Chave> chaves = repository.search(data);
             display(chaves);
+            btnShowAll.Text = "Exibir todos";
+        }
+
+        // Recarrega o documento e em seguida exibe todas as chaves
+        private void btnShowAll_Click(object sender, EventArgs e)
+        {
+            cmbChaves.Text = "";
+            btnShowAll.Text = "Atualizar";
+            repository.load();
+            display(repository.chaves);
         }
     }
 }
