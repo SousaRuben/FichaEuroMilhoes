@@ -49,7 +49,7 @@ namespace Ficha_Euromilhoes.Models
         {
             // Pega um valor com base no tempo
             int seed = (int) DateTimeOffset.Now.Ticks % DateTimeOffset.Now.Millisecond;
-            Debug.WriteLine(seed);
+
             // Cria um objeto Random com base na seed
             random = new Random(seed);
             gerarPrincipais();

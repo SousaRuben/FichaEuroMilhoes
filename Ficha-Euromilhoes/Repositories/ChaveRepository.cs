@@ -17,6 +17,7 @@ namespace Ficha_Euromilhoes.Repositories
         public ChaveRepository(string path)
         {
             FilePath = path;
+            load();
         }
 
         // Cria e diciona uma chave a lista
@@ -27,6 +28,21 @@ namespace Ficha_Euromilhoes.Repositories
             return chave;
         }
 
+        // Carrega os dados do arquivo para a memória
+        public void load()
+        {
+            try
+            {
+                string jsonString = File.ReadAllText(FilePath);
+                chaves = JsonSerializer.Deserialize<List<Chave>>(jsonString);
+            }
+            catch (System.Exception e)
+            {
+                Console.WriteLine(e);
+                throw e;
+            }
+        }
+
         // Armazena os dados da lista para um arquivo JSON
         public void save()
         {
@@ -35,8 +51,8 @@ namespace Ficha_Euromilhoes.Repositories
                 WriteIndented = true,
             };
 
-            string jsonSting = JsonSerializer.Serialize(chaves, options);
-            File.WriteAllText(FilePath, jsonSting);
+            string jsonString = JsonSerializer.Serialize(chaves, options);
+            File.WriteAllText(FilePath, jsonString);
         }
     }
 }
