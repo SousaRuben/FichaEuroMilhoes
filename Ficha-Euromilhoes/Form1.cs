@@ -19,6 +19,7 @@ namespace Ficha_Euromilhoes
         ChaveRepository repository = new ChaveRepository(path);
         public Form1()
         {
+            
             InitializeComponent();
         }
 
@@ -45,7 +46,7 @@ namespace Ficha_Euromilhoes
             dgvChaves.Rows.Clear();
             foreach (var chave in source)
             {
-                dgvChaves.Rows.Add(chave.Principais, chave.Estrelas);
+                dgvChaves.Rows.Add(chave.PrincipalString(), chave.EstrelaString());
             }
         }
 

@@ -7,6 +7,8 @@ using System.IO;
 using System.Text.Json;
 
 using Ficha_Euromilhoes.Models;
+using System.Diagnostics;
+
 namespace Ficha_Euromilhoes.Repositories
 {
     class ChaveRepository
@@ -41,6 +43,7 @@ namespace Ficha_Euromilhoes.Repositories
             {
                 string jsonString = File.ReadAllText(FilePath);
                 chaves = JsonSerializer.Deserialize<List<Chave>>(jsonString);
+                Debug.WriteLine(jsonString);
             }
             catch (System.Exception e)
             {
