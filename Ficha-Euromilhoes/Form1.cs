@@ -58,7 +58,7 @@ namespace Ficha_Euromilhoes
             for(int i = 0; i < nChave; i++)
             {
                 Chave myChave = repository.addChave();
-                dgvChaves.Rows.Add(myChave.Principais, myChave.Estrelas);
+                dgvChaves.Rows.Add(myChave.PrincipalString(), myChave.EstrelaString());
             }
 
             repository.save();

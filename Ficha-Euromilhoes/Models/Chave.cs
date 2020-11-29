@@ -28,8 +28,8 @@ namespace Ficha_Euromilhoes.Models
             gerarEstrelas();
 
             // Ordena de modo ascedente
-            // Array.Sort(principais);
-            // Array.Sort(estrelas);
+            Array.Sort(Principais);
+            Array.Sort(Estrelas);
         }
 
         // Gera um numero principal unico e aleatorio
