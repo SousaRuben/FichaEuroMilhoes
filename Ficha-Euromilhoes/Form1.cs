@@ -28,7 +28,7 @@ namespace Ficha_Euromilhoes
         {
             Chave myChave = new Chave();
 
-            dgvChaves.Rows.Add(myChave.getPrincipais(), myChave.getEstrelas());
+            dgvChaves.Rows.Add(myChave.Principais, myChave.Estrelas);
             
         }
     }

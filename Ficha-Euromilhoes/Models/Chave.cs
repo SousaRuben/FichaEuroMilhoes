@@ -8,12 +8,39 @@ namespace Ficha_Euromilhoes.Models
 {
     class Chave : Model
     {
-        public const int MAX_PRINCIPAL = 51;
-        public const int MAX_ESTRELAS = 13;
-        public const int MIN = 1;
-        public int[] Principais = new int[5];
-        public int[] Estrelas = new int[2];
-        Random random = new Random();
+        private const int MAX_PRINCIPAL = 51;
+        private const int MAX_ESTRELAS = 13;
+        private const int MIN = 1;
+        private int[] principais = new int[5];
+        private int[] estrelas = new int[2];
+        private Random random = new Random();
+
+        public string Principais
+        {
+            get
+            {
+                string data = "";
+                foreach (int valor in principais)
+                {
+                    data += $"{valor} ";
+                }
+                return data;
+            }
+        }
+
+        public string Estrelas
+        {
+            get
+            {
+                string data = "";
+                foreach (int valor in estrelas)
+                {
+                    data += $"{valor} ";
+                }
+                return data;
+            }
+        }
+
 
         public Chave() : base()
         {
@@ -24,7 +51,7 @@ namespace Ficha_Euromilhoes.Models
         public int gerarPrincipal()
         {
             int numero = random.Next(MIN, MAX_PRINCIPAL);
-            numero = Principais.Contains(numero) ? gerarPrincipal() : numero;
+            numero = principais.Contains(numero) ? gerarPrincipal() : numero;
 
             return numero;
         }
@@ -32,49 +59,25 @@ namespace Ficha_Euromilhoes.Models
         public int gerarEstrela()
         {
             int novaEstrela = random.Next(MIN, MAX_ESTRELAS);
-            novaEstrela = Estrelas.Contains(novaEstrela) ? gerarEstrela() : novaEstrela;
+            novaEstrela = estrelas.Contains(novaEstrela) ? gerarEstrela() : novaEstrela;
 
             return novaEstrela;
         }
 
         public void gerarPrincipais()
         {
-            for (int i = 0; i < Principais.Length; i++)
+            for (int i = 0; i < principais.Length; i++)
             {
-                Principais[i] = gerarPrincipal();
+                principais[i] = gerarPrincipal();
             }
         }
 
          public void gerarEstrelas()
         {
-            for (int i = 0; i < Estrelas.Length; i++)
+            for (int i = 0; i < estrelas.Length; i++)
             {
-                Estrelas[i] = gerarEstrela();
+                estrelas[i] = gerarEstrela();
             }
         }
-           
-        public string getPrincipais()
-        {
-            string data = "";
-
-            foreach (int valor in Principais)
-            {
-                data += $"{valor} ";
-            }
-
-            return data;
-        }
-        public string getEstrelas()
-        {
-            string data = "";
-
-            foreach (int valor in Estrelas)
-            {
-                data += $"{valor} ";
-            }
-
-            return data;
-        }
-
     }
 }

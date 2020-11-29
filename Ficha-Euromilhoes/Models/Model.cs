@@ -8,15 +8,13 @@ namespace Ficha_Euromilhoes.Models
 {
     abstract class Model
     {
-        public DateTime CreatedAt { get; set; }
+        public DateTime CreatedAt = DateTime.Today;
         public string Data {
             get { return $"{CreatedAt.Day}/{CreatedAt.Month}/{CreatedAt.Year}"; }
         }
 
         public Model()
-        {
-            CreatedAt = DateTime.Today;
-        }
+        {}
         
         
     }
