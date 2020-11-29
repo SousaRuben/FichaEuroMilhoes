@@ -31,6 +31,7 @@ namespace Ficha_Euromilhoes
 
         private void initComboBox()
         {
+            cmbChaves.Items.Clear();
             foreach(var chave in repository.chaves)
             {
                 if (cmbChaves.Items.Contains(chave.Data))
@@ -52,6 +53,7 @@ namespace Ficha_Euromilhoes
 
         private void btnGerar_Click(object sender, EventArgs e)
         {
+            txtNChaves.Text = "";
             int nChave = 0;
             int.TryParse(this.txtNChaves.Text, out nChave);
 
@@ -79,6 +81,7 @@ namespace Ficha_Euromilhoes
             cmbChaves.Text = "";
             btnShowAll.Text = "Atualizar";
             repository.load();
+            initComboBox();
             display(repository.chaves);
         }
     }
