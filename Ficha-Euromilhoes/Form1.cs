@@ -24,7 +24,7 @@ namespace Ficha_Euromilhoes
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            displayAll();
+            display(repository.chaves);
             initComboBox();
         }
 
@@ -40,9 +40,10 @@ namespace Ficha_Euromilhoes
             }
         }
 
-        private void displayAll()
+        private void display(List<Chave> source)
         {
-            foreach(var chave in repository.chaves)
+            dgvChaves.Rows.Clear();
+            foreach (var chave in source)
             {
                 dgvChaves.Rows.Add(chave.Principais, chave.Estrelas);
             }
@@ -61,6 +62,13 @@ namespace Ficha_Euromilhoes
 
             repository.save();
             initComboBox();
+        }
+
+        private void cmbChaves_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string data = cmbChaves.Text;
+            List<Chave> chaves = repository.search(data);
+            display(chaves);
         }
     }
 }

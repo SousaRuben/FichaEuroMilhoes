@@ -28,6 +28,12 @@ namespace Ficha_Euromilhoes.Repositories
             return chave;
         }
 
+        // Pesquisa chaves com base numa data
+        public List<Chave> search(string data)
+        {
+            return chaves.FindAll(chave => chave.Data == data);
+        }
+
         // Carrega os dados do arquivo para a memória
         public void load()
         {

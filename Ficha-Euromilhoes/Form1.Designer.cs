@@ -178,6 +178,7 @@
             this.cmbChaves.Size = new System.Drawing.Size(389, 44);
             this.cmbChaves.Sorted = true;
             this.cmbChaves.TabIndex = 1;
+            this.cmbChaves.SelectedIndexChanged += new System.EventHandler(this.cmbChaves_SelectedIndexChanged);
             // 
             // dgvChaves
             // 
