@@ -20,7 +20,24 @@ namespace Ficha_Euromilhoes
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
             displayAll();
+            initComboBox();
+        }
+
+        private void initComboBox()
+        {
+            foreach(var chave in repository.chaves)
+            {
+                if (cmbChaves.Items.Contains(chave.Data))
+                {
+                    continue;
+                }
+                cmbChaves.Items.Add(chave.Data);
+            }
         }
 
         private void displayAll()
