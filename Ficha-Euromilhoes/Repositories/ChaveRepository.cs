@@ -16,7 +16,15 @@ namespace Ficha_Euromilhoes.Repositories
 
         public ChaveRepository(string path)
         {
-            this.FilePath = path;
+            FilePath = path;
+        }
+
+        // Cria e diciona uma chave a lista
+        public Chave addChave()
+        {
+            Chave chave = new Chave();
+            chaves.Add(chave);
+            return chave;
         }
 
         // Armazena os dados da lista para um arquivo JSON
