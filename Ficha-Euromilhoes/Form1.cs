@@ -20,6 +20,15 @@ namespace Ficha_Euromilhoes
         public Form1()
         {
             InitializeComponent();
+            displayAll();
+        }
+
+        private void displayAll()
+        {
+            foreach(var chave in repository.chaves)
+            {
+                dgvChaves.Rows.Add(chave.Principais, chave.Estrelas);
+            }
         }
 
         private void btnGerar_Click(object sender, EventArgs e)
