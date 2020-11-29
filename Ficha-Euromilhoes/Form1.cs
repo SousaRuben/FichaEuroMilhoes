@@ -60,6 +60,7 @@ namespace Ficha_Euromilhoes
             }
 
             repository.save();
+            initComboBox();
         }
     }
 }

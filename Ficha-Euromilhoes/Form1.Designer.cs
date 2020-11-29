@@ -176,6 +176,7 @@
             this.cmbChaves.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbChaves.Name = "cmbChaves";
             this.cmbChaves.Size = new System.Drawing.Size(389, 44);
+            this.cmbChaves.Sorted = true;
             this.cmbChaves.TabIndex = 1;
             // 
             // dgvChaves
