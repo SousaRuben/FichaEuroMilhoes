@@ -53,16 +53,16 @@ namespace Ficha_Euromilhoes
 
         private void btnGerar_Click(object sender, EventArgs e)
         {
-            txtNChaves.Text = "";
             int nChave = 0;
             int.TryParse(this.txtNChaves.Text, out nChave);
 
-            for(int i = 0; i < nChave; i++)
+            for (int i = 0; i < nChave; i++)
             {
                 Chave myChave = repository.addChave();
                 dgvChaves.Rows.Add(myChave.PrincipalString(), myChave.EstrelaString());
             }
 
+            txtNChaves.Text = "";
             repository.save();
             initComboBox();
         }

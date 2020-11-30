@@ -43,11 +43,11 @@ namespace Ficha_Euromilhoes.Repositories
             {
                 string jsonString = File.ReadAllText(FilePath);
                 chaves = JsonSerializer.Deserialize<List<Chave>>(jsonString);
-                Debug.WriteLine(jsonString);
+                //Debug.WriteLine(jsonString);
             }
             catch (System.Exception e)
             {
-                Console.WriteLine(e);
+                Debug.WriteLine(e);
                 throw e;
             }
         }
