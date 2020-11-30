@@ -62,7 +62,7 @@ namespace Ficha_Euromilhoes
                 dgvChaves.Rows.Add(myChave.PrincipalString(), myChave.EstrelaString());
             }
 
-            txtNChaves.Text = "";
+            txtNChaves.ResetText();
             repository.save();
             initComboBox();
         }
